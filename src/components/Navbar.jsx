@@ -1,14 +1,14 @@
 function Navbar() {
   return (
-    <div>
+    <div className="navbar">
       <ul>
         <li>
-          <a href="/">Home</a>
+          {/* <Link to="/">Home</Link> */}
+          a
         </li>
         <li>
-          <a href="/summary" title="Summary of tests to perform">
-            Summary
-          </a>
+          {/* <Link to="/summary">Summary</Link> */}
+          b
         </li>
       </ul>
     </div>
