@@ -77,7 +77,7 @@ export default class Operation extends PureComponent {
     const OperationExt = getComponent("OperationExt");
     const OperationSummary = getComponent("OperationSummary");
     const Link = getComponent("Link");
-    const Checklist = getComponent("Checklist");
+    // const Checklist = getComponent("Checklist");
 
     const { showExtensions } = getConfigs();
 
@@ -153,12 +153,14 @@ export default class Operation extends PureComponent {
               </div>
             ) : null}
 
+            {/* For Checklist */}
             {!showExtensions || !extensions.size ? null : (
-              <Checklist
+              <OperationExt
                 path={path}
                 method={method}
                 extensions={extensions}
                 getComponent={getComponent}
+                getConfigs={getConfigs}
               />
             )}
 

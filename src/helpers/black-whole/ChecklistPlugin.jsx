@@ -144,7 +144,7 @@ function ChecklistPlugin() {
       // OperationExtRow: OperationExtRow,
       OperationExt: OperationExt,
       operation: Operation,
-      Checklist: Checklist,
+      // Checklist: Checklist,
     },
     wrapComponents: {
       OperationExtRow: Checklist,

@@ -1,39 +1,25 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
 
-export const OperationExt = ({ extensions, getComponent }) => {
-    let OperationExtRow = getComponent("OperationExtRow")
-    return (
-      <div className="opblock-section">
-        <div className="opblock-section-header">
-          <h4>Extensions</h4>
-          <button className="btn save-btn" type="submit">
-              Save
-            </button>
-        </div>
-        <div className="table-container">
-          <form method="post">
-            <table>
-              <thead>
-                <tr>
-                  <td className="col_header">Name</td>
-                  <td className="col_header">Status</td>
-                </tr>
-              </thead>
-              <tbody>
-                  {
-                      extensions.entrySeq().map(([k, v]) => <OperationExtRow key={`${k}-${v}`} xKey={k} xVal={v} />)
-                  }
-              </tbody>
-            </table>
-          </form>
-        </div>
+export const OperationExt = ({
+  path,
+  method,
+  extensions,
+  getComponent,
+  getConfigs,
+}) => {
+  let OperationExtRow = getComponent("OperationExtRow");
+  return (
+    <div className="opblock-section">
+      <div className="opblock-section-header">
+        <h4>Checklist</h4>
       </div>
-    )
-}
-OperationExt.propTypes = {
-  extensions: PropTypes.object.isRequired,
-  getComponent: PropTypes.func.isRequired
-}
+      <div className="table-container">
+        {extensions.entrySeq().map(([k, v]) => (
+          <OperationExtRow path={path} method={method} key={`${k}-${v}`} xKey={k} xVal={v} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default OperationExt
+export default OperationExt;

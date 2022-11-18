@@ -1,8 +1,21 @@
-import { useEffect } from "react";
 import SwaggerUI from "swagger-ui-react";
 import "swagger-ui-react/swagger-ui.css";
 
-import ChecklistPlugin from "../components/ChecklistPlugin";
+import OperationExt from "../components/operation-extensions";
+import Operation from "../components/operation";
+import ChecklistExt from "../components/ChecklistExt";
+
+function MyChecklistPlugin() {
+  return {
+    components: {
+      OperationExt: OperationExt,
+      operation: Operation,
+    },
+    wrapComponents: {
+      OperationExtRow: ChecklistExt,
+    },
+  };
+}
 
 function Home() {
   return (
@@ -10,10 +23,12 @@ function Home() {
       {/* <SwaggerUI url="https://petstore.swagger.io/v2/swagger.json" /> */}
       <SwaggerUI
         url="/data/swagger-lite.json"
-        plugins={[ChecklistPlugin]}
-        deepLinking={true}
+        plugins={[MyChecklistPlugin]}
         showExtensions={true}
-        showCommonExtensions={true}
+        displayRequestDuration={true}
+        // configs={{
+        //   checklistConfig: { postFormUrl: "" },
+        // }}
       />
     </div>
   );
