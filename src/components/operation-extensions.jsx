@@ -1,0 +1,39 @@
+import React from "react"
+import PropTypes from "prop-types"
+
+export const OperationExt = ({ extensions, getComponent }) => {
+    let OperationExtRow = getComponent("OperationExtRow")
+    return (
+      <div className="opblock-section">
+        <div className="opblock-section-header">
+          <h4>Extensions</h4>
+          <button className="btn save-btn" type="submit">
+              Save
+            </button>
+        </div>
+        <div className="table-container">
+          <form method="post">
+            <table>
+              <thead>
+                <tr>
+                  <td className="col_header">Name</td>
+                  <td className="col_header">Status</td>
+                </tr>
+              </thead>
+              <tbody>
+                  {
+                      extensions.entrySeq().map(([k, v]) => <OperationExtRow key={`${k}-${v}`} xKey={k} xVal={v} />)
+                  }
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+    )
+}
+OperationExt.propTypes = {
+  extensions: PropTypes.object.isRequired,
+  getComponent: PropTypes.func.isRequired
+}
+
+export default OperationExt

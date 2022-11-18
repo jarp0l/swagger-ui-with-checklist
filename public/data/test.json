@@ -1,0 +1,16 @@
+{
+  "category": {
+    "endpoint": {
+      "post": {
+        "checks": [
+          {
+            "IDOR": {
+              "completed": false
+            }
+          }
+        ]
+      },
+      "get": {}
+    }
+  }
+}

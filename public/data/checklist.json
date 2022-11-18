@@ -1,0 +1,61 @@
+{
+  "allItems": ["abc", "def", "ghi", "jkl", "mno", "pqr", "xyz"],
+  "paths": {
+    "/user/{username}": {
+      "get": {
+        "tags": ["user"],
+        "checklist": [
+          {
+            "item": "abc",
+            "completed": false
+          },
+          {
+            "item": "def",
+            "completed": false
+          }
+        ]
+      },
+      "put": {
+        "tags": ["user"],
+        "checklist": [
+          {
+            "item": "abc",
+            "completed": false
+          },
+          {
+            "item": "def",
+            "completed": false
+          }
+        ]
+      },
+      "delete": {
+        "tags": ["user"],
+        "checklist": [
+          {
+            "item": "abc",
+            "completed": false
+          },
+          {
+            "item": "def",
+            "completed": false
+          }
+        ]
+      }
+    },
+    "/user/login": {
+      "get": {
+        "tags": ["user"],
+        "checklist": [
+          {
+            "item": "abc",
+            "completed": false
+          },
+          {
+            "item": "def",
+            "completed": false
+          }
+        ]
+      }
+    }
+  }
+}

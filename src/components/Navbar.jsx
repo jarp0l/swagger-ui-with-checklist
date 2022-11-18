@@ -1,15 +1,17 @@
+const style = {
+  list: {
+    listStyle: "none",
+    display: "flex",
+    justifyContent: "space-evenly",
+  },
+};
+
 function Navbar() {
   return (
     <div className="navbar">
-      <ul>
-        <li>
-          {/* <Link to="/">Home</Link> */}
-          a
-        </li>
-        <li>
-          {/* <Link to="/summary">Summary</Link> */}
-          b
-        </li>
+      <ul style={style.list}>
+        <li>Home</li>
+        <li>Summary</li>
       </ul>
     </div>
   );
