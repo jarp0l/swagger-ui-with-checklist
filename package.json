@@ -1,6 +1,6 @@
 {
   "name": "swagger-react",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "license": "MIT",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@braintree/sanitize-url": "^6.0.2",
     "@kyleshockey/xml": "^1.0.2",
+    "formik": "^2.2.9",
     "memoizee": "^0.4.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
