@@ -1,0 +1,30 @@
+{
+  "name": "swagger-react",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@braintree/sanitize-url": "^6.0.2",
+    "@kyleshockey/xml": "^1.0.2",
+    "formik": "^2.2.9",
+    "memoizee": "^0.4.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "react-switch": "^7.0.0",
+    "react-uuid": "^2.0.0",
+    "swagger-ui-react": "^4.15.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "vite": "^3.2.3"
+  }
+}
