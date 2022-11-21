@@ -4,3 +4,14 @@
   color: #fff;
 }
 
+.swagger-ui .checklist-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 5% 0;
+}
+
+.swagger-ui .checklist-item-wrapper {
+  position: relative;
+}

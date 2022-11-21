@@ -72,23 +72,24 @@ const Checklist = (props) => {
     >
       {({ values }) => (
         <Form>
-          <div id="checkbox-group">Checklist</div>
-          <div role="group" aria-labelledby="checkbox-group">
+          {/* <div id="checkbox-group">Checklist</div> */}
+          <div role="group" aria-labelledby="checkbox-group" className="checklist-wrapper">
             {checklistItems.map((checklistItem) => {
               return (
-                <label key={method + path + checklistItem.item}>
+                <label key={method + path + checklistItem.item} className="checklist-item-wrapper">
                   <Field
                     type="checkbox"
                     name="checked"
                     value={checklistItem.item}
+                    className="checklist-item"
                   />
-                  {checklistItem.item}
+                  {" "}{checklistItem.item}
                 </label>
               );
             })}
           </div>
 
-          <button className="btn save-btn" type="submit" onClick={handleSave}>
+          <button className="btn save-btn" type="submit">
             Save
           </button>
         </Form>
